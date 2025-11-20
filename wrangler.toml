@@ -1,0 +1,17 @@
+name = "service-dashboard"
+main = "functions/api.js"
+compatibility_date = "2025-11-20"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "SERVICE_DB"
+
+kv_namespaces = [ { binding = "OTP_KV", id = "" } ]
+
+[vars]
+MAILGUN_DOMAIN = ""
+MAILGUN_API_KEY = ""
+JWT_SECRET = "replace_with_strong_secret"
+
+[build]
+command = "npm run build"
